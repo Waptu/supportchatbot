@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ business_name }} | Customer Support</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- LEFT SIDE: BUSINESS INFORMATION -->
+        <section class="welcome-section">
+
+            <div class="logo">M</div>
+
+            <p class="subtitle">MINING & TECHNOLOGY</p>
+
+            <h1>{{ business_name }}</h1>
+
+            <p class="description">
+                Welcome to our official customer support platform.
+                We connect customers with reliable mineral sourcing,
+                natural resources and cryptocurrency services.
+            </p>
+
+            <div class="mineral-list">
+
+                <span>Columbite</span>
+                <span>Tantalite</span>
+                <span>Tin</span>
+                <span>Lithium</span>
+                <span>Gold</span>
+                <span>Other Earth Metals</span>
+                <span>Cryptocurrency</span>
+
+            </div>
+
+            <div class="business-info">
+                <h3>How can we help you?</h3>
+
+                <p>
+                    Our support assistant is available to answer
+                    questions about mineral enquiries, purchasing,
+                    supply, cryptocurrency and customer services.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE: CHATBOT -->
+        <section class="chat-section">
+
+            <div class="chat-header">
+
+                <div class="bot-logo">M</div>
+
+                <div class="header-details">
+
+                    <h2>Mining Support Assistant</h2>
+
+                    <p>
+                        <span class="online-dot"></span>
+                        Online Assistant
+                    </p>
+
+                </div>
+
+                <button id="clear-chat" class="clear-button">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- CHAT MESSAGES -->
+            <div class="chat-messages" id="chat-messages">
+
+                <div class="message bot-message">
+
+                    <div class="message-content">
+
+                        Hello! Welcome to {{ business_name }}.
+
+                        I'm your customer support assistant.
+
+                        How can I assist you today?
+
+                        <div class="quick-buttons">
+
+                            <button data-question="I want to buy lithium">
+                                Buy Minerals
+                            </button>
+
+                            <button data-question="I want to sell tantalite">
+                                Sell Minerals
+                            </button>
+
+                            <button data-question="Tell me about cryptocurrency">
+                                Cryptocurrency
+                            </button>
+
+                            <button data-question="I want to know your mineral prices">
+                                Request Prices
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHAT INPUT -->
+            <form id="chat-form" class="chat-input">
+
+                <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Type your message here..."
+                    autocomplete="off"
+                    maxlength="1500"
+                    required
+                >
+
+                <button type="submit" id="send-button">
+                    Send
+                </button>
+
+            </form>
+
+
+            <div class="chat-footer">
+
+                <p>
+                    Customer Support | {{ business_name }}
+                </p>
+
+                <small>
+                    Never share passwords, private keys or wallet recovery phrases.
+                </small>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
